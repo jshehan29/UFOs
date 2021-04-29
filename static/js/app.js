@@ -23,3 +23,27 @@ function buildTable(data) {
     });
 
 }
+
+// Handle button click to filter table
+function handleClick() {
+    // Grab the datetime value from the filter
+    let date = d3.select("#datetime").property("value");
+    let filteredData = tableData;
+
+    // Check to see if a date was entered and filter data using that date
+    if (date) {
+        // Apply 'filter' to the table data to only keep rows where 'datetime'
+        // value matches the filter value
+        filteredData = filteredData.filter(row => row.datetime === date);
+    };
+
+    // Build the filtered table
+    // Note: If no date was entered, the table will just be the original table
+    buildTable(filteredData);
+}
+
+// Attach an event to listen for the button click
+d3.selectAll("#filter-btn").on("click", handleClick);
+
+// Build the table when the page loads
+buildTable(tableData);
