@@ -54,7 +54,7 @@ From here, the sightings that occured on 1/4/2010 in CA are further filtered by 
 
 *Figure 7. UFO sightings filtered by date, state, and shape*
 
-The HTML code to create the filters and table structure on the webpage is shown in Figs. 8 and 9.
+The HTML code to create the filters and table structure on the webpage is shown in Figs. 8 and 9. The JavaScript links are also shown in lines 84-86 in Fig. 9. Line 84 was provided in the Module 11 exercises and links to the d3 library. Line 85 links to the table data, and line 86 links to the app.js file which contains the JavaScript code to filter the table.
 
 ![Fig 8](./Resources/filter_HTML.png)
 
@@ -62,7 +62,7 @@ The HTML code to create the filters and table structure on the webpage is shown 
 
 ![Fig 9](./Resources/table_structure_and_links_to_js_HTML.png)
 
-*Figure 9. HTML code to create table structure*
+*Figure 9. HTML code to create table structure and link JavaScript files*
 
 JavaScript was used to make the webpage dynamic with interactive filters. The JavaScript code to filter the UFO data and update the webpage is shown in Figs. 10-14. The code in Fig. 10, reads in the table data as a constant and assigns it to *tableData*, and the code in lines 5-24 builds the table based on the information in the *data* object.
 
